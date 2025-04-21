@@ -1,0 +1,118 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+@font-face {
+    font-family: "Overused Grotesk";
+    src: url('https://raw.githubusercontent.com/RandomMaerks/Overused-Grotesk/master/fonts/variable/OverusedGroteskRoman-VF.ttf');
+    font-weight: 300 900;
+}
+
+:root {
+    --bg: #202025;
+    --bg-ctrl: #25252a;
+    --bg-acc: #222227;
+    --border: #303030;
+    --fg: white;
+    --fg-dsbl: #505050;
+
+    --hdr-h: 64px;
+}
+
+html {
+    font-family: 'Overused Grotesk', sans-serif;
+    background-color: var(--bg);
+    color: var(--fg);
+}
+
+body {
+    margin: 0;
+}
+
+.mono {
+    font-family: 'Fira Code', monospace;
+}
+
+/* SIGNIN/SIGNUP FORM */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+label > span {
+    margin-left: 5px;
+    font-size: small;
+}
+
+input {
+    height: 38px;
+    width: calc(100% - 18px);
+    padding: 2px 8px;
+
+    border-radius: 8px;
+    border: 1px solid var(--border);
+
+    background-color: var(--bg-ctrl);
+    color: var(--fg);
+    font-size: medium;
+}
+input[type="submit"] {
+    width: 100%;
+    margin: 16px 0 0  ;
+    font-weight: bold;
+}
+input[disabled] {
+    color: var(--fg-dsbl);
+}
+
+a.register-account {
+    display: inline-block;
+    color: var(--fg);
+    font-size: small;
+    text-align: right;
+    width: 100%;
+}
+
+main.signin-form {
+    margin: auto;
+    max-width: 256px;
+    background-color: var(--bg-acc);
+    border: 1px solid var(--border);
+    padding: 24px 8px;
+    border-radius: 16px;
+}
+
+main.signin-form h1 {
+    margin-top: 0;
+}
+
+/* MAIN PAGE */
+
+header {
+    height: var(--hdr-h);
+
+    position: sticky;
+    top: 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 1fr 296px;
+    width: 100%;
+    height: calc(100vh - var(--hdr-h));
+}
+
+#content > article {
+    background-color: red;
+}
+
+#content > aside {
+}

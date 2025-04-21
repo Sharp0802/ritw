@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+    <title>RITW | Sign In</title>
+</head>
+
+<body>
+
+<main class="signin-form">
+    <h1 class="mono">$ useradd</h1>
+
+    <form method="POST" action="/signin">
+        <label>
+            <span>ID</span>
+            <input name="id" type="text" required />
+        </label>
+
+        <label>
+            <span>Username</span>
+            <input name="name" type="text" required />
+        </label>
+
+        <label>
+            <span>Password</span>
+            <input name="password" type="password" required />
+        </label>
+
+        <input type="submit" value="Register" disabled />
+    </form>
+</main>
+
+</body>
+
+</html>
